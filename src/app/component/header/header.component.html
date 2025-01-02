@@ -1,0 +1,39 @@
+<div class="headerContainer">
+    <div class="hamburger" (click)="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="logo">
+      <img src="assets/images/logo_web.png" />
+    </div>
+    <div class="search">
+      <input
+        type="text"
+        class="SearchInput"
+        placeholder="Search city"
+        [(ngModel)]="searchQuery"
+        (ngModelChange)="onSearchChange()"
+        name="search"
+        autocomplete="off"
+      />
+      <button class="SearchSubmit" type="submit">
+        <img src="assets/icons/icon_search_white.png" alt="Search" class="SearchIcon" />
+      </button>
+      <div *ngIf="searchResults.length > 0" class="search-results">
+        <div *ngFor="let result of searchResults">
+          <p class="search-result-1" (click)="onSuggestionClick(result)">{{ result.name }}, {{ result.region }}</p>
+         
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" *ngIf="isSidebarOpen">
+      <ul>
+        <li  (click)="navigateTo('home')">Home</li>
+        <li  (click)="navigateTo('favourite')">Favourite</li>
+        <li (click)="navigateTo('recent-search')">Recent Search</li>
+      </ul>
+    </div>
+  </div>  
+   

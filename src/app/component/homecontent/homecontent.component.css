@@ -1,0 +1,102 @@
+.home-content-title{
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 1rem;
+   
+}
+
+.fav{
+    padding: 0;
+    margin-left: .8rem;
+
+}
+
+.home-content-button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+
+
+}
+
+.weather-details{
+    display: flex;  
+    align-items: center;
+    flex-direction: column;
+    margin-left: 1rem;
+    justify-content: center;
+
+}
+
+.weather-temp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: sans-serif;
+   
+    font-size: 1rem;
+}
+
+.temp{
+    font-size: 4.5rem;
+    font-weight: 540;
+    margin: 1rem 0 0 0;
+}
+
+.temp-text{
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 350;
+    letter-spacing: .05rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media only screen and (max-width: 775px) {
+    .home-content-title{
+        display: flex;
+        justify-content: center;
+        font-size: 1.1rem;
+        margin-left: 0;
+        letter-spacing: .1cap;
+    }
+
+    .fav{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .home-content-button{
+        font-size: .8rem;
+    }
+    .home-content-button>img{
+        width: 1.5rem;
+    }
+
+    .weather-details>img{
+        margin-top: 2rem;
+        width: 4rem;
+    }
+    .temp{
+        font-size: 3.5rem;
+    }
+
+    .temp-text{
+        font-size: 1.1rem;
+        margin-top: .7rem;
+        margin-bottom: 2rem;
+    }
+}

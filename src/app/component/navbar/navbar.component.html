@@ -1,0 +1,17 @@
+<div class="navbar">
+    <div class="navbarItem">
+        <div class="navbar-left">
+            <p [class.active]="currentTab === 'home'" (click)="navigateTo('home')">HOME</p>
+            <p [class.active]="currentTab === 'favourite'" (click)="navigateTo('favourite')">FAVOURITE</p>
+            <p [class.active]="currentTab === 'recent-search'" (click)="navigateTo('recent-search')">RECENT SEARCH</p>
+        </div>
+        <div class="navbar-right">
+            <h1 class="date">
+                {{formattedDate}}
+            
+            </h1>
+        </div>
+
+    </div>
+    
+</div>

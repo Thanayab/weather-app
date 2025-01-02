@@ -1,0 +1,24 @@
+<div class="home-content-body">
+    <h1 class="home-content-title">{{data.location.name}}, {{data.location.region}}</h1>
+
+    <div class="fav">
+        <button class="home-content-button" *ngIf="!b" (click)="addToFavourite()">
+            <img src="assets/icons/icon_favourite.png" alt=""> Add to favourite
+        </button>
+        <button class="home-content-button" *ngIf="b">
+            <img src="assets/icons/icon_favourite_Active.png" alt=""> Added to favourite
+        </button>
+    </div>
+    
+
+    <div class="weather-details">
+        <img [src]="data.current.condition.icon" alt="">
+
+
+        <div class="weather-temp">
+            <h1 class="temp">{{data.current.temp_c}}</h1>
+            <h1 class="temp-text">{{data.current.condition.text}}</h1>
+        </div>
+    </div>
+</div>
+<app-home-content-bottom></app-home-content-bottom>
