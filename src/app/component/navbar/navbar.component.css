@@ -104,9 +104,12 @@
     .date{
         margin-top: 0rem;
         font-size: .8rem;
-        color: rgba(172, 170, 170, 0.842);
+        color: rgba(216, 216, 216, 0.897);
         letter-spacing: .2cap;
         margin-bottom: 0;
+        padding-right: 0;
     }
     
+    
+
   }

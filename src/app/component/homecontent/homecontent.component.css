@@ -69,6 +69,24 @@
 
 }
 
+.home-content-button-active{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #fff;
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: .9rem;
+    margin: 0;
+}
+
+.home-content-button-active>img{
+    width: 28px;
+}
 .weather-details{
     display: flex;  
     align-items: center;
@@ -112,6 +130,11 @@
         letter-spacing: .1cap;
     }
 
+    .buttons>button{
+        width: 0;
+        height: 6vh;
+    }
+
     
 
     .fav{
@@ -121,10 +144,13 @@
         
     }
 
-    .home-content-button{
+    .home-content-button, .home-content-button-active{
         font-size: .8rem;
     }
     .home-content-button>img{
+        width: 1.5rem;
+    }
+    .home-content-button-active>img{
         width: 1.5rem;
     }
 
