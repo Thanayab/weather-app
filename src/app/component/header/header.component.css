@@ -33,7 +33,8 @@
   }
    
   input::placeholder {
-    color: #ffF;
+    color: #ffffff75;
+    font-size: 1rem;
   }
    
   .search-results {

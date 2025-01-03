@@ -4,7 +4,7 @@
         <div class="fav-title-list">
             <h1 class="fav-title">You recently searched for
             </h1>
-            <h1 class="fav-remove" (click)="openDialogueboc()">Remove all</h1>
+            <h1 class="fav-remove" (click)="openDialogueboc()">Clear all</h1>
         </div>
        
         <div class="fav-list" *ngFor="let data of value;let j=index">
@@ -18,7 +18,7 @@
                         <img [src]="data.icon" alt="">
                     </div>
                     <div class="fav-item-temp">
-                        <h1>{{data.temp_c}}<span>°C</span></h1>
+                        <h1>{{data.temp_c}}<span></span></h1>
                     </div>
 
                     <div class="fav-item-temp-title">
@@ -26,9 +26,9 @@
                     </div>
                 </div>
 
-                <div class="fav-item-img-1">
+                <!-- <div class="fav-item-img-1">
                     <img src="assets/icons/icon_favourite_Active.png"  alt="">
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -60,9 +60,9 @@
 
 
             </div>
-            <div class="fav-item-img-1-mobile">
+            <!-- <div class="fav-item-img-1-mobile">
                 <img src="assets/icons/icon_favourite_Active.png"  alt="Favorite Icon">
-            </div>
+            </div> -->
         </div>
 
 

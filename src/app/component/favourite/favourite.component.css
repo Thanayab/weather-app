@@ -23,6 +23,11 @@
     font-weight: 400;
     margin-right: 1rem;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fav-remove:hover{
+    color: var(--yellow)
 }
 
 .fav-list{
@@ -141,6 +146,8 @@ span{
     text-align: center;
     color: white;
 }
+
+
 
 
 
