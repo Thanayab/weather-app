@@ -1,9 +1,16 @@
+.home-content-body{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .home-content-title{
     font-size: 1.5rem;
-    font-family: sans-serif;
-    font-weight: 600;
+    font-family: "Inter", serif;
+    font-weight: 400;
     color: #fff;
-    margin-left: 1rem;
+    margin: 2rem 1rem 0rem;
    
 }
 
@@ -54,9 +61,9 @@
     align-items: center;
     gap: .5rem;
     color: #fff;
-    font-family: sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-size: .9rem;
     margin: 0;
 
 
@@ -76,7 +83,7 @@
     /* flex-direction: column; */
     align-items: center;
     color: #fff;
-    font-family: sans-serif;
+    font-family: "Inter", serif;
    
     font-size: 1rem;
 }
@@ -93,17 +100,19 @@
     font-size: 1.4rem;
     font-weight: 350;
     letter-spacing: .05rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+    font-family: "Inter", serif;}
 
 @media only screen and (max-width: 775px) {
     .home-content-title{
         display: flex;
         justify-content: center;
         font-size: 1.1rem;
-        margin-left: 0;
+        /* margin-left: 0; */
+        margin-bottom: 1rem;
         letter-spacing: .1cap;
     }
+
+    
 
     .fav{
         margin: 0;

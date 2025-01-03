@@ -2,12 +2,18 @@
     <h1 class="home-content-title">{{data.location.name}}, {{data.location.region}}</h1>
 
     <div class="fav">
-        <button class="home-content-button" *ngIf="!b" (click)="addToFavourite()">
-            <img src="assets/icons/icon_favourite.png" alt=""> Add to favourite
-        </button>
-        <button class="home-content-button" *ngIf="b">
-            <img src="assets/icons/icon_favourite_Active.png" alt=""> Added to favourite
-        </button>
+        @if(!b){
+            
+            <button class="home-content-button"  (click)="addToFavourite()">
+                <img src="assets/icons/icon_favourite.png" alt=""> Add to favourite
+            </button>
+        }
+        @else{
+
+            <button class="home-content-button" (click)="addToFavourite()" >
+                <img src="assets/icons/icon_favourite_Active.png" alt=""> Added to favourite
+            </button>
+        }
     </div>
     
 

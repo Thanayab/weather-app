@@ -10,7 +10,7 @@
             <h1 class="fav-remove" (click)="openDialogueboc()">Remove all</h1>
         </div>
 
-        <div class="fav-list" *ngFor="let data of value">
+        <div class="fav-list" *ngFor="let data of value;let j=index">
             <div class="fav-item" >
 
 
@@ -33,10 +33,8 @@
                     </div>
                 </div>
 
-
-
                 <div class="fav-item-img-1">
-                    <img src="assets/icons/icon_favourite_Active.png" alt="">
+                    <img src="assets/icons/icon_favourite_Active.png" (click)="removeFavourite(j)"alt="">
                 </div>
 
             </div>
@@ -45,7 +43,7 @@
 
         <!-- mobile -->
 
-        <div class="fav-list-mobile"  *ngFor="let data of value">
+        <div class="fav-list-mobile"  *ngFor="let data of value;let j=index">
             <div class="fav-item-mobile">
 
                 <div class="fav-item-title-mobile">
@@ -70,7 +68,7 @@
 
             </div>
             <div class="fav-item-img-1-mobile">
-                <img src="assets/icons/icon_favourite_Active.png" alt="Favorite Icon">
+                <img src="assets/icons/icon_favourite_Active.png" (click)="removeFavourite(j)" alt="Favorite Icon">
             </div>
         </div>
 

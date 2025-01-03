@@ -26,7 +26,7 @@ export class FavouriteComponent implements OnInit{
       this.value = [];
     }
   }
-  handleClick(index: number) {
+  removeFavourite(index: number) {
     this.value.splice(index, 1);
  
    

@@ -13,13 +13,17 @@ export class RecentSearchComponent {
   showPrompt: boolean = false;
   value:any=[];
   ngOnInit(): void {
-    this.value=JSON.parse(localStorage.getItem('favourite')||'{}');
+    this.value=JSON.parse(localStorage.getItem('recentSearch')||'[]');
 
   }
+  openDialogueboc() {
+    this.showPrompt = true;
+  }
+ 
   handleResponse(response: boolean) {
     this.showPrompt = false;
     if (response) {
-      localStorage.removeItem('favourite');
+      localStorage.removeItem('recentSearch');
       this.value = [];
     }
   }
