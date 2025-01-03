@@ -84,16 +84,7 @@ export class HeaderComponent {
   onSuggestionClick(item: any) {
     this.searchQuery = item.name;
     
-    const recentList = JSON.parse(localStorage.getItem('recentSearch') || '[]');
-    const tempData = {
-      name: item.name,
-      region: item.region,
-    };
-
-    if (!recentList.some((recentItem: any) => recentItem.name === tempData.name)) {
-      recentList.push(tempData);
-      localStorage.setItem('recentSearch', JSON.stringify(recentList));
-    }
+   
 
     this.searchResults = [];
    this.searchSelection.emit(item)

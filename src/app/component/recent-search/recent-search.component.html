@@ -22,13 +22,13 @@
                     </div>
 
                     <div class="fav-item-temp-title">
-                        <h1>{{data.text}}</h1>
+                        <h1>{{data?.text}}</h1>
                     </div>
                 </div>
 
-                <!-- <div class="fav-item-img-1">
+                <div class="fav-item-img-1">
                     <img src="assets/icons/icon_favourite_Active.png"  alt="">
-                </div> -->
+                </div>
 
             </div>
         </div>
@@ -46,7 +46,7 @@
 
                 <div class="fav-item-middle-mobile">
                     <div class="fav-item-img2-mobile">
-                        <!-- <img [src]="data.icon" alt="Weather Icon"> -->
+                        <img [src]="data.icon" alt="Weather Icon">
                     </div>
 
                     <div class="fav-item-temp-mobile">
@@ -69,8 +69,8 @@
 
     </div>
 </div>
-
-<app-dialoguebox *ngIf="showPrompt" (response)="handleResponse($event)"></app-dialoguebox>
+<!-- 
+<app-dialoguebox *ngIf="showPrompt" (response)="handleResponse($event)"></app-dialoguebox> -->
 }
 @else{
 <div class="fav-empty">

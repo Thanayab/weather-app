@@ -23,7 +23,7 @@ export class RecentSearchComponent {
   handleResponse(response: boolean) {
     this.showPrompt = false;
     if (response) {
-      localStorage.removeItem('recentSearch');
+      localStorage.removeItem('favourite');
       this.value = [];
     }
   }
