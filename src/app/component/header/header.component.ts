@@ -18,7 +18,7 @@ export class HeaderComponent {
   searchResults: any[] = [];
 
   constructor(private http: HttpClient, private router: Router) {}
-
+@Output()searchSelection = new EventEmitter<any>();
   private headers = new HttpHeaders({
     'X-RapidAPI-Key': 'af3431978amshc69811be2a6a5cep1e62abjsnbf2a965a707d',
     'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com',
@@ -83,7 +83,7 @@ export class HeaderComponent {
 
   onSuggestionClick(item: any) {
     this.searchQuery = item.name;
-
+    
     const recentList = JSON.parse(localStorage.getItem('recentSearch') || '[]');
     const tempData = {
       name: item.name,
@@ -96,7 +96,7 @@ export class HeaderComponent {
     }
 
     this.searchResults = [];
-    this.router.navigate(['/home']);
+   this.searchSelection.emit(item)
   }
 
   navigateTo(tab: string) {

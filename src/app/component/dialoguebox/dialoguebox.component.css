@@ -24,6 +24,7 @@
   .box p,
   .buttons button {
     color: black;
+    cursor: pointer;
   }
    
   .buttons {
@@ -39,8 +40,24 @@
   .yes-btn {
     background-color: rgba(255, 72, 5, 0.932);
     color: white;
+    transition: all 0.3s ease-in-out;
   }
   .no-btn {
     color: black;
     background-color: white;
+  }
+  .no-btn {
+    color: black;
+    background-color: rgb(211, 211, 211);
+    border: 1px solid black;
+    transition: all 0.3s ease-in-out;
+  }
+  .no-btn:hover {
+    
+    background-color: rgb(141, 141, 141);
+    border: 1px solid black;
+  }
+
+  .yes-btn:hover{
+    background-color: rgba(204, 54, 0, 0.932);
   }

@@ -21,6 +21,7 @@ export class HomecontentComponent implements OnInit {
     this.data=JSON.parse(localStorage.getItem('weatherData')||'{}');
     this.currentTemperature = this.data.current.temp_c;
     this.sharedService.currentData.subscribe((data: any) => {
+      
       this.data = data;
     })
 

@@ -30,35 +30,6 @@ export class AppComponent implements OnInit {
       params: { q: location },
     });
   }
-  onSearchSelection(item: any) {
-    this.handleSelectedItem(item);
-  }
-  handleSelectedItem(item: any) {
-    const recentList = JSON.parse(localStorage.getItem('recentSearch') || '[]');
-   
-    let tempData = {
-      name: item.name,
-      region: item.region,
-      localtime: item.localtime,
-      text: item.text,
-      icon: item.icon,
-      temp_c: item.temp_c,
-    };
- 
-    const exists = recentList.some(
-      (recentItem: any) =>
-        recentItem.name === tempData.name &&
-        recentItem.region === tempData.region
-    );
-    if (!exists) {
-      recentList.push(tempData);
-      localStorage.setItem('recentSearch', JSON.stringify(recentList));
-    }
-    const cityName = item && item.name ? item.name : 'Udupi'; 
-   console.log(cityName);
-    this.fetchWeatherData(cityName);
-   
-  }
  
   ngOnInit(cityName: string = 'Udupi'): void {
     this.fetchWeatherData(cityName);
