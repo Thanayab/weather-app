@@ -14,9 +14,7 @@
     display: flex;
   }
 
-  input::placeholder{
-    color: #fff;
-  }
+ 
    
   .SearchInput {
     border: 0.8px solid #ffffff4e;
@@ -104,12 +102,20 @@
     flex-direction: column;
     padding: 20px;
     transform: translateX(-100%);
-    transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   }
+
+
+.sidebar.open {
+  transform: translateX(0);
+}
    
   .sidebar ul {
-    list-style: none;
-    padding: 0;
+    margin: 20px 0;
+  cursor: pointer;
+  color: #a5a5a5;
+  font-size: 1rem;
+  padding: 0;
     
   }
    
@@ -139,9 +145,7 @@
       color: black;
     }
    
-    .sidebar.open {
-      transform: translateX(0);
-    }
+   
    
     .logo img {
       margin-left: 2rem;
@@ -167,10 +171,14 @@
         margin-right: 1rem;
     }
 
+    
+
     .sidebar ul li {
       margin: 20px 0;
       cursor: pointer;
       color: #a5a5a5;
+      font-size: 1rem;
+      list-style: none;
     }
   
   
@@ -179,7 +187,24 @@
     
     }
   
-   
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: var(--white);
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .sidebar.open {
+      transform: translateX(0);
+    }
 
     
    

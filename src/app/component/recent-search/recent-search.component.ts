@@ -16,7 +16,7 @@ export class RecentSearchComponent {
     this.value=JSON.parse(localStorage.getItem('recentSearch')||'[]');
 
   }
-  openDialogueboc() {
+   openDialogueboc() {
     this.showPrompt = true;
   }
  

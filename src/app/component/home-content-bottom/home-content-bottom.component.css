@@ -54,6 +54,9 @@
     font-weight: 500;
     font-family: "Inter", serif;}
 
+    .scroll{
+        display: none;
+    }
 
 @media only screen and (max-width: 775px) {
     .footer{
@@ -65,7 +68,7 @@
        /* width: 100%; */
        overflow: auto;
        padding: 10px 0;
-       height: 15vh;
+       height: 8vh;
     }
 
     .min-max, .precipitation, .humidity, .wind, .visibility{
@@ -81,6 +84,18 @@
     .details-value{
         font-size: 1.2rem;
     }
+
+    .scroll{
+        display: flex;
+
+        justify-content: center;
     
+    }
+    
+    .scroll-text{
+        font-size: .7rem;
+        color: #ffff;
+        font-weight: 400;
+    }
 
 }

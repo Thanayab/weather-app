@@ -28,13 +28,12 @@
       </div>
     </div>
 
-    <div class="sidebar" *ngIf="isSidebarOpen">
+    <div class="sidebar" [class.open]="isSidebarOpen">
       <ul class="sidebar-list">
         <li [class.active]="currentTab === 'home'" (click)="navigateTo('home')">Home</li>
         <li [class.active]="currentTab === 'favourite'" (click)="navigateTo('favourite')">Favourite</li>
         <li [class.active]="currentTab === 'recent-search'" (click)="navigateTo('recent-search')">Recent Search</li>
       </ul>
-     
     </div>
   </div>  
    
